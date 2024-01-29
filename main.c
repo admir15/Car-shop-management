@@ -16,7 +16,7 @@ struct User {
 };
 
 void displayMenu() {
-    printf("\n===== Car Shop Menu =====\n");
+    
     printf("1. Signup\n");
     printf("2. Login\n");
     printf("3. View Car Brands\n");
@@ -26,7 +26,7 @@ void displayMenu() {
     printf("7. Display Cart\n");
     printf("8. Buy Now\n");
     printf("9. Exit\n");
-    printf("=========================\n");
+    
 }
 
 int signup(struct User *users, int numUsers) {
