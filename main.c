@@ -16,7 +16,7 @@ struct User {
 };
 
 void displayMenu() {
-    
+    printf("\n===== Car Shop Menu =====\n");
     printf("1. Signup\n");
     printf("2. Login\n");
     printf("3. View Car Brands\n");
@@ -26,7 +26,7 @@ void displayMenu() {
     printf("7. Display Cart\n");
     printf("8. Buy Now\n");
     printf("9. Exit\n");
-    
+    printf("=========================\n");
 }
 
 int signup(struct User *users, int numUsers) {
@@ -201,8 +201,12 @@ int main() {
                 printf("Please login first.\n");
             }
             break;
-        case 5:
-            searchCars(cars, numCars);
+       case 5:
+    if (currentUserIndex != -1) {
+                searchCars(cars, numCars);
+            } else {
+                printf("Please login first.\n");
+            }
             break;
         case 6:
             if (currentUserIndex != -1) {
@@ -226,7 +230,7 @@ int main() {
             }
             break;
         case 9:
-            printf("Exiting program.\n");
+            printf("Goodbye.\n");
             exit(0);
         default:
             printf("Invalid choice. Please try again.\n");
